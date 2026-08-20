@@ -11,3 +11,5 @@ print(" Welcome to class " + name)
 
 weekend = input("What did you do this weekend?")
 print("That is super cool I wish " + weekend + " this weekend.")
+food = input("What is your favorite food?")
+print("That is cool I really like " + food + " too.")
