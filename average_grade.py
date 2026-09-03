@@ -1,3 +1,4 @@
+
 # Joaquin Rosales Programming 1 Grade Average Assignment
 
 print("How many classes do you have and what are they?")
@@ -15,6 +16,10 @@ periodeight = input("What is your last period?")
 print("Ok I am now going to ask you your grade in each of your classes")
 onegrade = input("What is your grade in " + periodone + "?")
 twograde = input("What is your grade in " + periodtwo + "?")
+if twograde == "0":
+    print("Ok, I won't mark that grade")
+if twograde == "N/A":
+    print("Ok, I won't mark that grade")
 threegrade = input("What is your grade in " + periodthree + "?")
 if periodfour == "lunch":
     print("I won't grade you for this")
@@ -29,4 +34,4 @@ else:
 sevengrade = input("What is your grade in" + periodseven + "?")
 eightgrade = input("What is your grade in" + periodeight + "?")
 classes = input("I will ask you, how many classes do you have that have grades?")
-
+print("Your average grade is: " + str((float(onegrade) + float(threegrade) + float(sevengrade) + float(eightgrade)) / float(classes)))
