@@ -34,4 +34,5 @@ else:
 sevengrade = input("What is your grade in" + periodseven + "?")
 eightgrade = input("What is your grade in" + periodeight + "?")
 classes = input("I will ask you, how many classes do you have that have grades?")
-print("Your average grade is: " + str((float(onegrade) + float(threegrade) + float(sevengrade) + float(eightgrade)) / float(classes)))
+if periodfour == "advisory":
+    print("Your average grade is: " + str((float(onegrade) + float(threegrade) + float(sixgrade) + float(sevengrade) + float(eightgrade)) / float(classes)))
