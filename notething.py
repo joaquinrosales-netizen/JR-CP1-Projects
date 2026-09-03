@@ -27,3 +27,5 @@ word = input("What word do you want?")
 start = sentence.find(word)
 length = len(word)
 print(sentence[start:start+length])
+
+#another set of notes i guess
