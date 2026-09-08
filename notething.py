@@ -41,7 +41,7 @@ print(sentence.find("over"))
 
 #we are trying to do ask the user their name here
 
-first_name = input("What is your first name: ").strip().title()
+"""first_name = input("What is your first name: ").strip().title()
 last_name = input("What is your last name: ").strip().title()
 first_seperated = first_name.split()
 fixed = "".join(first_seperated)
@@ -64,12 +64,26 @@ print(sentence.find("over"))
 
 print(sentence.split("the"))
 
-#print(sentence.lower())
-#print(sentence.upper())
-#print(sentence.capitalize())
-#print(sentence.title())
-#print(fixed)
+print(sentence.lower())
+print(sentence.upper())
+print(sentence.capitalize())
+print(sentence.title())
+print(fixed)
 
-#print("Welcome to BlobGPT")
-#name = input("Please register your full name into the program: ")
-#print("Hello " + name.strip().title())
+print("Welcome to BlobGPT")
+name = input("Please register your full name into the program: ")
+print("Hello " + name.strip().title())
+
+print(full_name.isalpha())#checks if the entire thing is characters
+print(full_name.isnumeric())#checks if the entire thing is numbers
+print(full_name)
+
+# formatted string
+print(f"Hello {full_name} welcome to BlobGPT")"""
+
+letter = input("Give me a letter ")
+letter = letter[0].lower()
+number_value = ord(letter)#puts them as numbers in the keyboard value thingy or something like that
+number_value +=2
+new_letter = chr(number_value)
+print(f"Your letter was {letter} now it is {new_letter}")# f strings yippee
