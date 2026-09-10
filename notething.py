@@ -40,8 +40,8 @@ fixed = sentence.replace("fox", "wolf")
 print(sentence.find("over"))
 
 #we are trying to do ask the user their name here
-
-"""first_name = input("What is your first name: ").strip().title()
+"""
+first_name = input("What is your first name: ").strip().title()
 last_name = input("What is your last name: ").strip().title()
 first_seperated = first_name.split()
 fixed = "".join(first_seperated)
@@ -76,10 +76,10 @@ print("Hello " + name.strip().title())
 
 print(full_name.isalpha())#checks if the entire thing is characters
 print(full_name.isnumeric())#checks if the entire thing is numbers
-print(full_name)
+print(full_name)"""
 
 # formatted string
-print(f"Hello {full_name} welcome to BlobGPT")"""
+print(f"Hello {full_name} welcome to BlobGPT")
 
 letter = input("Give me a letter ")
 letter = letter[0].lower()

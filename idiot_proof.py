@@ -16,8 +16,9 @@ while True:
 	if len(phone) == 10 and phone.isdigit():
 		break
 	print("I no understanding either. Please enter a valid ten-digit phone number. ")
+formatted_number = f"{phone[:3]}-{phone[3:6]}-{phone[6:]}"
 print("Thank you for registering your information into the program. Your information is as follows:")
 print("Name: " + full_name)
-print("GPA: " + str(GPA))
-print("Phone Number: " + phone)
+print("GPA: " + str((float)(GPA)))
+print("Phone Number: " + formatted_number)
 print("I have eaten well, I totally won't sell your information to China, trust broskie. Have a good day :)")

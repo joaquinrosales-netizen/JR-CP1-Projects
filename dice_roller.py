@@ -1,9 +1,8 @@
 import random
 
-
 print("Welcome to BlobGPT")
 print("I want to play a game with you buddy boy")
-gameaccept = input("Do you accept the game? (yes/no question only): ").strip().lower()
+gameaccept = input("Do you accept the game? (yes/no question only): ").capitalize().strip()
 if gameaccept == "Yes":
     print("Ok let's begin")
 if gameaccept == "No":
@@ -37,7 +36,10 @@ if dice == "D18":
 D20 = random.randint(1,20)
 if dice == "D20":
     print(f"You rolled a {D20}!")
-print("Thanks for playing with me, I will give you a ten percent less chance of being captured by China, and my respect.")
+if gameaccept == "No":
+    print("You were not willing to play with me, so now I have to sell your information to China.")
+if gameaccept == "Yes":
+    print("Thanks for playing with me, I will give you a ten percent less chance of being captured by China, and my respect.")
 
 #I will store the dice variables right here
 #D4 = random.randint(1,4)
