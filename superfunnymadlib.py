@@ -1,7 +1,6 @@
 # joaquin Rosales madlib assignment
 print("Welcome user")
 print("You are a fat rat")
-print("Welcome to my game")
 print("I will ask you some silly questions")
 questionone = input("Give me a random noun ")
 sentence = input("Write any sentence,it doesn't even have to make sense")

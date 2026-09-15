@@ -13,4 +13,4 @@ print(f"I have {oranges} oranges.")
 
 percent = random.random()
 
-print(f"You have a {percent:.2} grade.")
+print(f"You have a {percent:.2f} grade.")
