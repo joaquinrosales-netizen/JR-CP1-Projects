@@ -1,9 +1,10 @@
 #joaquin rosales user sign in assignment
-user = "MaroonMissisipiMan2012"
+user = input("Please type in a new username: ")
+
+password = input("Please type in a new password: ")
+print("Ok you will now type your username and password again.")
 
 username = input("Please type in the correct username: ")
-
-password = "COSTCOIZEPICXD"
 
 passkey = input("Please type in the correct password: ")
 
