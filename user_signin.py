@@ -7,6 +7,7 @@ password = "COSTCOIZEPICXD"
 
 passkey = input("Please type in the correct password: ")
 
-if passkey == password:
-    print("Welcome to the account")
-elif username == user
+if passkey == password and username == user:
+    print("Login succesful")
+else:
+    print("Login unsuccessful")
