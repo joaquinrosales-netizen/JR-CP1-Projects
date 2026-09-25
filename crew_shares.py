@@ -1,10 +1,10 @@
 #Unit 2 final project Joaquin Rosales
 import random
 def main():
-    crew = input("How many crew members do you have?: ")
+    crew = int(input("How many crew members do you have?: "))
     crew_members = crew - 2
     units = random.randint(500, 5000)
-    print(f"All crew members: {crew_members}")
+    print(f"All crew members excluding Quill and Yondu: {crew_members}")
     print(f"Units: {units}")
     crew_payment = crew_members * 3
     units_left = units - crew_payment
@@ -25,4 +25,6 @@ def main():
     print(f"Final split per person: {last_share} units")
     print(f"Yondu: {yondu_total:.2f} units")
     print(f"Quill: {quill_total:.2f} units")
-    print(f"Every crew member: {crew_per_person:.2f} units") 
+    print(f"Every crew member: {crew_per_person:.2f} units")
+
+main()
