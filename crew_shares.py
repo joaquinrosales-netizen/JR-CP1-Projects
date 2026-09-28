@@ -1,30 +1,20 @@
-#Unit 2 final project Joaquin Rosales
 import random
-def main():
-    crew = int(input("How many crew members do you have?: "))
-    crew_members = crew - 2
-    units = random.randint(500, 5000)
-    print(f"All crew members excluding Quill and Yondu: {crew_members}")
-    print(f"Units: {units}")
-    crew_payment = crew_members * 3
-    units_left = units - crew_payment
-    yondu_share = round(units_left * 0.13, 2)
-    units_left = units_left - yondu_share
-    quill_share = round(units_left * 0.11, 2)
-    units_left = units_left - quill_share
-    last_share = round(units_left /crew_members,2 )
-    yondu_total = yondu_share + last_share
-    quill_total = quill_share + last_share
-    crew_per_person = 3 + last_share
-    print(f"Yondu's 13% payment: {yondu_share} units")
-    print(f"Quill's 11% payment: {quill_share} units")
-    print(f"Final split per person: {last_share} units")
-    print(f"Yondu: {yondu_total:.2f} units")
-    print(f"Quill: {quill_total:.2f} units")
-    print(f"Every crew member: {crew_per_person:.2f} units")
-    print(f"Final split per person: {last_share} units")
-    print(f"Yondu: {yondu_total:.2f} units")
-    print(f"Quill: {quill_total:.2f} units")
-    print(f"Every crew member: {crew_per_person:.2f} units")
 
-main()
+crew = int(input("How many members are in your crew?: "))
+
+units = random.randint(500,5000)
+print("Number of units: " + str(units))
+
+lower_crew = crew - 2
+
+yondu_share = round(units * 0.13)
+quill_share = round(units * 0.11)
+
+units_remaining = units - yondu_share
+units_left = units_remaining - quill_share
+
+final_split = round(units_left / lower_crew)
+
+print("Yondu: " + str(yondu_share))
+print("Quill: " + str(quill_share))
+print("The Crew: " + str(final_split))
