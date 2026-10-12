@@ -2,7 +2,7 @@
 
 import random
 
-escape_code = random.randint(1,9999)
+escape_code = random.randint(1, 9999)
 
 print("Welcome to BlobGPT")
 print("You have commited too many crimes against China")
@@ -11,12 +11,15 @@ print("You are to guess a number between one and 9999")
 print("Good luck")
 
 while True:
-        try:
-            guess = int(input("Type what you think the code is right here: "))
+    try:
+        guess = int(input("Type what you think the code is right here: "))
 
         if guess == escape_code:
             print("You got the code correct. You are free to leave.")
+            break
         elif guess > escape_code:
             print("You got the number a bit too big, try again.")
         elif guess < escape_code:
             print("You got the number a little bit too small, try again.")
+    except ValueError:
+        print("Idk how ya got here bud but ya need to try again, maybe try using a number.")
