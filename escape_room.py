@@ -47,7 +47,7 @@ while True:
             elif guess_freedom > freedom_code:
                 print("You got the number a bit too big, do the task bro think about it")
             elif guess_freedom < freedom_code:
-                print("The number ya guessed is too small, try again, loser😆😆😆😆")
+                print("The number ya guessed is too small, try again, loser😆😆w😆😆")
     except ValueError:
         print("Read the instructions you chud, IT VERBALLY SAYS YOU NEED TO PUT IN A NUMBER, DO I HAVE TO REPEAT MYSELF, N-U-M-B-E-R")
 
