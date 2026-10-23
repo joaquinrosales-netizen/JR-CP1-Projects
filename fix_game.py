@@ -34,16 +34,16 @@ print(f"Your guesses per round: {guesses}")
 
 total = 0
 for score in scores:
-    total = 0
+    # no need for the total here, it resets the score everytime
     total = total + score
 
 average = total / rounds
 print("Your average guesses per round was " + str(average))
 
 best_round = scores[0]
-for i in range(1, rounds - 1):
+# the -1 would interfere with the original code, not showing the user the true value
+for i in range(1, rounds):
     if scores[i] < best_round:
         best_round = scores[i]
 
 print(f"Your best round took only {best_round} guesses!")
-# program is fully running
