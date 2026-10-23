@@ -17,7 +17,7 @@ for round_num in range(1, rounds + 1):
         guess = int(input("Guess a number between 1 and 20: "))
         guesses = guesses + 1
 
-#This line was missing a colon and I added it
+#This line was missing a colon and I added it, SyntaxError, if statements need colons after it, and it wasn't working but I saved the day
         if guess == secret_number:
             print(f"Correct! It took you {guesses} guesses.")
             found = True
@@ -29,7 +29,8 @@ for round_num in range(1, rounds + 1):
     scores.append(guesses)
 
 print("\n--- Game Over ---")
-print(str("Your guesses per round: " + guesses))
+#needed an f string so it could properly run, TypeError, this bug stopped the game from running because guesses is supposed to be an integer, and it needed to be properly formatted
+print(f"Your guesses per round: {guesses}")
 
 total = 0
 for score in scores:
@@ -45,3 +46,4 @@ for i in range(1, rounds - 1):
         best_round = scores[i]
 
 print(f"Your best round took only {best_round} guesses!")
+# program is fully running
