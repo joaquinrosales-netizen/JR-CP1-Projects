@@ -20,7 +20,33 @@ while True:
     if not any(char.islower() for char in password):
         print("Your password does not have a lower case letter.")
     
-    if password not in numbers:
+    if not any(char.isnumeric() for char in password):
         print("Your password does not have any numbers")
+    
+    if not length(password) >= 8 or not any(char.isupper() for char in password) or not any(char.islower() for char in password) or not any(char.isnumeric() for char in password):
+        print("This is a weak password")
+    elif not length(password) >= 8 or not any(char.isupper() for char in password) or not any(char.islower() for char in password):
+        print("This is a weak password")
+    elif not length(password) >= 8 or not any(char.isupper() for char in password) or not any(char.isnumeric() for char in password):
+        print("This is a weak password")
+    elif not any(char.isupper() for char in password) or not any(char.islower() for char in password) or not any(char.isnumeric() for char in password):
+        print("This is a weak password")
+    
+
+    if not length(password) >= 8 or not any(char.isupper() for char in password):
+        print("This is a moderate password")
+    elif not length(password) >= 8 or not any(char.islower() for char in password):
+        print("This is a moderate password")
+    elif not length(password) >= 8 or not any(char.isnumeric for char in password):
+        print("This is a moderate password")
+    elif not any(char.isupper() for char in password) or not any(char.islower() for char in password):
+        print("This is a moderate password")
+    elif not any(char.isupper() for char in password) or not any(char.isnumeric() for char in password):
+        print("This is a moderate password")
+    elif not any(char.islower() for char in password) or not any(char.isnumeric() for char in password):
+        print("This is a moderate password")
+
+    else:
+        print("This is a very strong password")
 
         break
