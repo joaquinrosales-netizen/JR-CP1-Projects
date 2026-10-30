@@ -1,8 +1,6 @@
 # JR password strength checker code
-
-specials = ["~","`","!","@","#","$","%","^","&","*","(",")", "_","-","+","=","{","[","]","}","|",":",";","'",'"',"<",",",">",".","?","/"]
-numbers = ["0","1","2","3","4","5","6","7","8","9"]
-cap = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
+points = []
+specials = ["~","`","!","@","#","$","%","^","&","*","(",")","-","_","+","=","[","]","{","}","|","'",'"',":",";","<",">",",",".","?","/"]
 
 while True:
 
@@ -13,40 +11,35 @@ while True:
         return len(password) >= 8
     if not length(password):
         print("Your password is not long enough")
+    else:
+        points.append( 1 )
 
     if not any(char.isupper() for char in password):
         print("Your password does not contain a capital")
-    
+    else:
+        points.append( 1 )
     if not any(char.islower() for char in password):
         print("Your password does not have a lower case letter.")
-    
+    else:
+        points.append( 1 )
     if not any(char.isnumeric() for char in password):
         print("Your password does not have any numbers")
-    
-    if not length(password) >= 8 or not any(char.isupper() for char in password) or not any(char.islower() for char in password) or not any(char.isnumeric() for char in password):
-        print("This is a weak password")
-    elif not length(password) >= 8 or not any(char.isupper() for char in password) or not any(char.islower() for char in password):
-        print("This is a weak password")
-    elif not length(password) >= 8 or not any(char.isupper() for char in password) or not any(char.isnumeric() for char in password):
-        print("This is a weak password")
-    elif not any(char.isupper() for char in password) or not any(char.islower() for char in password) or not any(char.isnumeric() for char in password):
-        print("This is a weak password")
-    
-
-    if not length(password) >= 8 or not any(char.isupper() for char in password):
-        print("This is a moderate password")
-    elif not length(password) >= 8 or not any(char.islower() for char in password):
-        print("This is a moderate password")
-    elif not length(password) >= 8 or not any(char.isnumeric for char in password):
-        print("This is a moderate password")
-    elif not any(char.isupper() for char in password) or not any(char.islower() for char in password):
-        print("This is a moderate password")
-    elif not any(char.isupper() for char in password) or not any(char.isnumeric() for char in password):
-        print("This is a moderate password")
-    elif not any(char.islower() for char in password) or not any(char.isnumeric() for char in password):
-        print("This is a moderate password")
-
     else:
+        points.append( 1 )
+    if not any(char in specials for char in password):
+        print("Your password does not have any special characters")
+    else:
+        points.append( 1 )
+    points_grading = sum(points)
+    print("Your score based on password strength is " ,points_grading, ".")
+    if points_grading == 5:
         print("This is a very strong password")
-
-        break
+    if points_grading == 4:
+        print("This is a strong password")
+    if points_grading == 3:
+        print("This is a moderate password")
+    if points_grading == 2:
+        print("This is a weak password")
+    if points_grading == 1:
+        print("This is a very weak password")
+    break
