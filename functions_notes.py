@@ -10,7 +10,7 @@ def poopy(name, age = 35):
     print(f"You are now {age} years old!")
 
 print("November")
-poopy("Tia", 30)
+poopy("Tia", 30) 
 print("December")
 poopy("Xavier", 24)
 print("January")
