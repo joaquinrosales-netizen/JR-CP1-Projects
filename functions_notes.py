@@ -36,4 +36,4 @@ while True:
         print(f"Good job {capital} is the capital of Utah.")
         break
     else:
-        print(f"Wrong, {capital} is not the capital of Utah")
+        print(f"Wrong, {capital} is not the capital of Utah")   
