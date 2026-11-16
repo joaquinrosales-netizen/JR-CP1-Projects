@@ -27,6 +27,9 @@ chicken_attack = 40
 cow_health = 150
 cow_attack = 10
 
+wolf_health = 120
+wolf_attack = 40
+
 print("The enemy, Wolf stats, Health:120, Damage: 40")
 
 print("Pig Stats, Health:90, Damage:20")
@@ -51,8 +54,15 @@ while True:
         break
     elif active_choice == "Fight":
         if random_thingy < 50:
-            print("hi")
+            print("Your attack missed!")
+            pig_health_damaged = wolf_attack - pig_health
+            print("The wolf has done 40 damage")
+        elif random_thingy > 50:
+            print("Attack hit!")
+            wolf_pig = wolf_health - pig_atttack
+            print(f"The wolf is now at {wolf_pig} health")
 
+            
     elif choice == "Chicken":
         active_choice = input("Good choice, the wolf has arrived, here are your options\nFight\nHeals\nSwitch\nGive up ").strip().title()
 
@@ -61,5 +71,6 @@ while True:
 
     else:
         print("Invalid, try again")
-    break
+        break
+
 
