@@ -32,7 +32,3 @@ avatar = {
 }
 
 print(avatar.Water.Katara)
-
-"Earth":{
-    "Toph": "something"
-} #type: ignore
