@@ -15,8 +15,6 @@ def clean(**kwargs):
         return kwargs.get("data").strip().lower()
     elif kwargs.get("type") == "int":
         return int(kwargs.get("type"))
-    elif kwargs.get("type" )== "float":
-        return round(float(kwargs["type"])(data), 2)
     elif kwargs["type"] == "list":
         return str(f"{x}, " for x in kwargs["data"])
     elif kwargs["type"] == "bool":
