@@ -32,7 +32,7 @@ for key in keys:
 
 while True:
     print(keys)
-    menu_order = input("Which menu would you like to see?: ").strip().title()
+    menu_order = input("(type end to end the order)Which menu would you like to see?: ").strip().title()
 
     if menu_order == "Sandwiches":
         print(subway_menu["Sandwiches"])
@@ -47,3 +47,29 @@ while True:
         order = input("Which chips would you like?")
         reciept.append(order)
         print(reciept)
+
+    if menu_order == "Cookies":
+        print(subway_menu["Cookies"])
+        amount = input("How many cookies would you like?: ") 
+        order = input("Which cookies would you like?")
+        reciept.append(order)
+        print(reciept)
+    
+    if menu_order == "Drinks":
+        print(subway_menu["Drinks"])
+        amount = input("How many Drinks would you like?: ") 
+        order = input("Which drinks would you like?")
+        reciept.append(order)
+        print(reciept)
+
+    if menu_order == "Salad":
+        print(subway_menu["Salad"])
+        amount = input("How many salads would you like?: ") 
+        order = input("Which salads would you like?")
+        reciept.append(order)
+        print(reciept)
+
+    if menu_order == "End":
+        print(reciept)
+        print("Thank you for ordering at subway")
+        break
