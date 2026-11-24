@@ -1,0 +1,21 @@
+
+#replacement for random
+chance
+
+#replacement for turtle
+draw
+
+length is list
+
+GENERATE chance.numbers.0-1 16 times
+
+CREATE turtle called maze
+draw CREATES 16x16 BOX
+
+# a guaranteed chance of there being a line that leads to the exit
+PATH = line.draw.exit according to BOX
+PATHTWO = line.draw.exit + 1 or - 1 according to BOX
+
+FUNCTION PATH
+FUNCTION PATHTWO
+
